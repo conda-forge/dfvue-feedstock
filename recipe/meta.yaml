@@ -1,5 +1,5 @@
 {% set name = "dfvue" %}
-{% set version = "1.9" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
-  sha256: 6eb61f045bb78cfb7afdc85eb30631e8723771a293b46870a6b6c635b5a6fbf7
+  sha256: bdf892e3f0223260ca137877e505ec713fc97fac1d5f5579e10f94961c22912e
 
 build:
   number: 0
