@@ -1,5 +1,5 @@
 {% set name = "dfvue" %}
-{% set version = "2.0" %}
+{% set version = "3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
-  sha256: bdf892e3f0223260ca137877e505ec713fc97fac1d5f5579e10f94961c22912e
+  sha256: 5cb75d27b2a3ddc2d23b6a6ae5fbaf3e92d2f6f5faec1d9729d33d74be4fdd61
 
 build:
   number: 0
@@ -27,7 +27,6 @@ requirements:
     - numpy
     - matplotlib-base
     - pandas
-    - customtkinter
     - __linux  # [linux]
     - __osx    # [osx]
     - __win    # [win]
