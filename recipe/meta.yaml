@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
   sha256: 2e292404303782203108c3bf20c63f7f22074e12bc0efa2ec9a685b0502e9120
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - dfvue = dfvue.__main__:main
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools >=42
     - setuptools_scm >=3.5
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base
     - pandas
@@ -33,6 +33,8 @@ requirements:
     - tk       # [linux]
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - dfvue  # [not linux]
   commands:
