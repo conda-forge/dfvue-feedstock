@@ -1,5 +1,5 @@
 {% set name = "dfvue" %}
-{% set version = "6.0" %}
+{% set version = "6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
-  sha256: 2e292404303782203108c3bf20c63f7f22074e12bc0efa2ec9a685b0502e9120
+  sha256: c7cb1c3828e525fedcde6e637afc98de134b7152a30108eeb7fd395251b1e120
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - dfvue = dfvue.__main__:main
@@ -41,11 +41,11 @@ test:
     - xvfb-run --auto-servernum python -c "import dfvue"  # [linux]
 
 app:
-    entry: python -m dfvue
-    icon: dfvue_icon.png
-    summary: dfvue - a minimal GUI for a quick view of csv files
-    type: desk
-    own_environment: True
+  entry: python -m dfvue
+  icon: dfvue_icon.png
+  summary: dfvue - a minimal GUI for a quick view of csv files
+  type: desk
+  own_environment: true
 
 about:
   home: https://github.com/mcuntz/dfvue
