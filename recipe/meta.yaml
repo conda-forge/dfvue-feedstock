@@ -1,13 +1,13 @@
 {% set name = "dfvue" %}
-{% set version = "6.7" %}
+{% set version = "6.7.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
-  sha256: 927c9b66da6f398cdcc2de0e276eda165798dd2c84cd8b6224bff2e6bc828ef5
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dfvue-{{ version }}.tar.gz
+  sha256: b4756e89bb13cf00c34f06628811ee5fa56a995022ce1355940111acf1c5019c
 
 build:
   number: 0
